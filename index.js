@@ -43,8 +43,10 @@ function checkText(modelName, topicBtn, articleText){
             clearScreen();
         },
         error: function(xhr, status, error) {
-            showAlert(xhr['responseJSON']['answer'], "Error Code: " + xhr.status);
             endLoadingScreen();
+            try{
+                showAlert(xhr['responseJSON']['answer'], "Error Code: " + xhr.status);
+            } catch(e){}
         }
     });
 }
