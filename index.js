@@ -29,7 +29,7 @@ function checkText(modelName, topicBtn, articleText){
         topic: topicBtn
     }
     $.ajax({
-        url: 'http://127.0.0.1:5000/detectHumanInAIText/checkText',
+        url: 'http://4.210.80.190:5000/detectHumanInAIText/checkText',
         type: 'POST',
         contentType: 'application/json',
         data: JSON.stringify(dataToSend),
